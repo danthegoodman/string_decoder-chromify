@@ -20,6 +20,8 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var StringDecoder = exports.StringDecoder = function(encoding) {
+  var Buffer = require('buffer').Buffer;
+
   this.encoding = (encoding || 'utf8').toLowerCase().replace(/[-_]/, '');
   switch (this.encoding) {
     case 'utf8':
